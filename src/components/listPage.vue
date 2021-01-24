@@ -1,10 +1,12 @@
 <template>
   <div style="padding: 20px">
     <a-row :gutter="16">
-      <a-button class="link" style="width: 20%" type="primary" @click="goToRoute"><a-icon type="plus" />Add New Link </a-button>
+      <div class="link-div">
+        <a-button class="link" style="width: 30%" type="primary" @click="goToRoute">Add New Link </a-button>
+      </div>
     </a-row>
     <a-row :gutter="16">
-      <a-select placeholder="Select an order" style="width: 20%" @change="handleChange">
+      <a-select placeholder="Select an order" style="width: 30%" @change="handleChange">
         <a-select-option value="mostVoted">Most Voted <a-icon type="sort-descending" /></a-select-option>
         <a-select-option value="lessVoted">Less Voted <a-icon type="sort-ascending" /></a-select-option>
       </a-select>
@@ -24,7 +26,7 @@
           </template>
           <a-card :title="item.name" :bordered="true">
             <p style="font-size: 18px;">Point: {{ item.points }}</p>
-            <p>{{ item.url }}</p>
+            <p class="title">{{ item.url }}</p>
           </a-card>
         </a-popover>
         <div class="btns">
@@ -187,6 +189,23 @@ export default {
   border: none;
 }
 .link {
-  margin-bottom: 20px;
+ margin-bottom: 20px
+}
+.title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .ant-list-vertical .ant-list-item {
+      flex-wrap: wrap-reverse;
+      width: 70% !important;
+  }
+}
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
 }
 </style>
