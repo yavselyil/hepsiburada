@@ -30,15 +30,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-/deep/ .ant-btn-primary {
-   background-color: #ff6000 !important;
-   border-color:  #ff6000;
-}
 
-/deep/ .ant-btn-primary:hover {
-   background-color: #ff6000;
-   border-color:  #ff6000;
-}
 </style>
 <style scoped>
 .footer {
