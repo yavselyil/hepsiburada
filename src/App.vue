@@ -2,9 +2,9 @@
   <div id="app">
     <a-layout id="components-layout-demo-fixed">
     <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
-      <div class="logo" />
+      <img src="./assets/hepsiburada-logo.png" height="100px" alt="">
     </a-layout-header>
-    <a-layout-content :style="{ marginTop: '64px' }">
+    <a-layout-content :style="{ marginTop: '130px' }">
       <div :style="{ background: '#fff', minHeight: '380px' }">
         <router-view></router-view>
       </div>
@@ -57,6 +57,14 @@ export default {
 /deep/ .ant-btn-primary:hover {
    background-color: #ff6000;
    border-color:  #ff6000;
+}
+
+/deep/ .ant-layout {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    min-height: 0;
+    background: white;
 }
 
 </style>

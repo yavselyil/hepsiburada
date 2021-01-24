@@ -9,13 +9,13 @@
       :wrapper-col="wrapperCol"
     >
       <a-form-model-item prop="name" label="Name">
-        <a-input v-model="form.name" />
+        <a-input placeholder="Please input name" v-model="form.name" />
       </a-form-model-item>
       <a-form-model-item prop="url" label="URL">
-        <a-input type="url" v-model="form.url" />
+        <a-input placeholder="e.g https://www.hepsiburada.com" prop="url" v-model="form.url" />
       </a-form-model-item>
       <a-form-model-item :wrapper-col="{ span: 24}">
-        <a-button type="primary" @click="onSubmit('success')"> Create </a-button>
+        <a-button type="primary" id="clickSave" @click="onSubmit('success')"> Create </a-button>
         <a-button style="margin-left: 10px" @click="goToRoute">
           Cancel
         </a-button>
@@ -28,7 +28,9 @@
 export default {
   name: "listPage",
   props: {
-    msg: String,
+      clickSave: {
+        type: Function
+      }
   },
   data() {
     return {
@@ -39,7 +41,7 @@ export default {
         name: [
           { required: true, message: "Please input name", trigger: "blur" },
         ],
-        url: [{ required: true, message: "Please input URL", trigger: "blur" }],
+        url: [{ type: 'url', required: true, message: "Please input valid URL", trigger: "blur" }],
       },
       form: {
         name: "",

@@ -18,7 +18,7 @@
       <a-list-item slot="renderItem" slot-scope="item">
         <a-popover placement="rightTop">
           <template slot="content">
-            <a-button type="danger" @click="openDialogModal(item)">
+            <a-button id="deleteBtn" type="danger" @click="openDialogModal(item)">
               Delete
             </a-button>
           </template>
@@ -43,7 +43,9 @@
 export default {
   name: "listPage",
   props: {
-    msg: String,
+      clickMe: {
+        type: Function
+      }
   },
   data() {
     return {
