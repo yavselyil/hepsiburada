@@ -180,6 +180,18 @@ export default {
     align-items: initial;
     width: 30%;
 }
+/deep/ .ant-pagination {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    text-align: center;
+}
 .btns {
   display: flex;
   justify-content: space-between;

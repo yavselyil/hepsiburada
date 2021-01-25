@@ -9,9 +9,6 @@
         <router-view></router-view>
       </div>
     </a-layout-content>
-    <a-layout-footer class="footer">
-      Developed By Yavuz Selim Yılmaz
-    </a-layout-footer>
   </a-layout>
   </div>
 </template>
@@ -29,6 +26,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 </style>
