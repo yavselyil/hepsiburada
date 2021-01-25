@@ -1,5 +1,8 @@
 # hepsiburada
 
+DEMO:
+https://nostalgic-ardinghelli-f4ab7e.netlify.app/#/
+
 ## Project setup
 ```
 npm install
